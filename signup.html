@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block title %}Signup | Registration{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 80%;
+        max-width: 600px;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .container h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .container input[type="text"],
+    .container input[type="email"],
+    .container input[type="password"],
+    .container input[type="tel"],
+    .container input[type="date"],
+    .container select,
+    .container textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .container button {
+        width: 100%;
+        padding: 15px;
+        background-color: #ff5a5f;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .container button:hover {
+        background-color: #e04e4e;
+    }
+
+    .container a {
+        display: block;
+        margin-top: 15px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .container a:hover {
+        text-decoration: underline;
+    }
+
+    .form-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .form-table td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .form-table td input,
+    .form-table td select,
+    .form-table td textarea {
+        width: 100%;
+    }
+
+    .form-table input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        font-size: 16px;
+    }
+
+    .form-table input[type="submit"]:hover {
+        background-color: #218838;
+    }
+</style>
+
+<!-- Signup Form -->
+<div class="container">
+    <h2>Sign Up</h2>
+    <form>
+        <input placeholder="Full Name" required type="text">
+        <input placeholder="Email ID" required type="email">
+        <input minlength="8" placeholder="Password (Min. 8 characters)" required type="password">
+        <input placeholder="+91 Mobile No" required type="tel">
+        <input placeholder="DOB" required type="date">
+        <input placeholder="University" required type="text">
+        <input placeholder="age" required type="number">
+
+
+        <tr>
+            <td><label for="degree level"></label></td>
+            <td>
+                <select id="degree level" name="degree level" required>
+                    <option value="">Select a degree level</option>
+                    <option value="ug">UG</option>
+                    <option value="pg">PG</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="CGPA">CGPA:</label></td>
+            <td><input id="CGPA" name="CGPA" required type="number"></td>
+        </tr>
+        <tr>
+            <td><label>Gender:</label></td>
+            <td>
+                <input id="male" name="gender" required type="radio" value="male">
+                <label for="male">Male</label>
+                <input id="female" name="gender" required type="radio" value="female">
+                <label for="female">Female</label>
+                <input id="other" name="gender" required type="radio" value="other">
+                <label for="other">Other</label>
+            </td>
+        </tr>
+
+        <div>
+            <input id="terms" required type="checkbox">
+            <label for="terms">I accept terms & conditions and privacy policy</label>
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+    <a href="/login">Already have an account? Login</a>
+</div>
+
+<!-- Registration Form -->
+
+
+{% endblock %}

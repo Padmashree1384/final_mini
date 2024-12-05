@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}Advice | page {% endblock %}
+
+{% block content %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background-color: #7B68EE;  /* Updated color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Added styling for the subheading */
+        .header .subheading {
+            margin-top: 10px;  /* Space below the main heading */
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .card a {
+            color: #7B68EE;  /* Updated color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .more-advice {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .more-advice a {
+            color: #7B68EE;  /* Updated color */
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .more-advice a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="header">
+        Advice and Information
+        <!-- Subheading added below the header -->
+        <div class="subheading">
+            Expert information and advice to help you through the challenges of student life.
+        </div>
+    </div>
+    <div class="content">
+        <div class="grid-container">
+            <div class="card">
+                <h3>Settling into University</h3>
+                <a href="#">Learn More &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>How to Reduce Stress</h3>
+                <a href="#">Learn More &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>How to Cope with Academic Pressure</h3>
+                <a href="#">Learn More &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Managing Depression and Social Relationships</h3>
+                <a href="#">Learn More &rarr;</a>
+            </div>
+        </div>
+        <div class="more-advice">
+            <a href="#">More Advice and Information &rarr;</a>
+        </div>
+    </div>
+{% endblock %}
